@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}'s CV</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p>Email: {{ email }} | Phone: {{ phone }}</p>
+    <p>Location: {{ location }}</p>
+    
+    <h2>Education</h2>
+    <ul>
+        {% for edu in education %}
+            <li>
+                <strong>{{ edu.degree }}</strong> at {{ edu.institution }} ({{ edu.duration }})
+                {% if edu.location %} - {{ edu.location }}{% endif %}
+                {% if edu.details %} <br> {{ edu.details }}{% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Technical Skills</h2>
+    {% for category, skills in technical_skills.items %}
+      <h3>{{ category }}</h3>
+      <ul>
+        {% for skill in skills %}
+          <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+    
+    
+    <h2>Work Experience</h2>
+    <ul>
+        {% for exp in work_experience %}
+            <li>
+                <strong>{{ exp.role }}</strong> at {{ exp.company }} ({{ exp.duration }})
+                <p>{{ exp.details }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Projects</h2>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <strong>{{ project.title }}</strong> ({{ project.duration }})
+                <p>{{ project.details }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
