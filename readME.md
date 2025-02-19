@@ -10,7 +10,7 @@ This project converts my resume (CV) into an HTML page rendered by Django.
 2. [Requirements](#requirements)  
 3. [Installation & Setup](#installation--setup)  
 4. [Running the Application](#running-the-application)  
-
+5. [Project Structure](#project-structure)
 
 ---
 
@@ -64,3 +64,21 @@ This project converts my resume (CV) into an HTML page rendered by Django.
 2. **Open in Browser**
     
 Open http://127.0.0.1:8000/ in your browser to view the CV page.
+
+5. **Project Structure**
+
+cv_django_project/
+├── manage.py
+├── my_cv/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── cv/
+│   ├── __init__.py
+│   ├── views.py
+│   ├── urls.py
+│   └── templates/
+│       └── cv/
+│           └── cv.html
+└── README.md
