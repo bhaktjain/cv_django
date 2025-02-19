@@ -83,3 +83,7 @@ cv_django_project/
 │           └── cv.html
 └── README.md
 ```
+## Screenshots from the browser
+
+![alt text](image.png)
+![alt text](image-1.png)
