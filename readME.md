@@ -66,7 +66,7 @@ This project converts my resume (CV) into an HTML page rendered by Django.
 Open http://127.0.0.1:8000/ in your browser to view the CV page.
 
 5. **Project Structure**
-
+```
 cv_django_project/
 ├── manage.py
 ├── my_cv/
@@ -82,3 +82,4 @@ cv_django_project/
 │       └── cv/
 │           └── cv.html
 └── README.md
+```
